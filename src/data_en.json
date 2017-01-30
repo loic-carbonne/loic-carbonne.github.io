@@ -1,0 +1,58 @@
+{
+"strings": {
+  "header_strongcontent":"I am Loïc Carbonne",
+  "header_content":", passionate software engineer.",
+  "aboutme_title":"About me",
+  "experiences_title":"Experiences and projects",
+  "sortbytechno":"Sort by technologies :",
+  "work_title":"Work",
+  "education.title":"Education",
+  "personal_title":"Personal",
+  "contact_title":"Get in touch",
+  "contact_text":"Don't hesitate to send me a message",
+  "contact_email":"Email",
+  "contact_name":"Name",
+  "footer_copyright":"Apache License, Version 2.0",
+  "footer_content":"Made with React. Designed with Strata from HTML5 UP",
+  "months":"months",
+  "years":"years",
+  "month":"month",
+  "year":"year",
+  "from":"from",
+  "to":"to",
+  "at":"at"
+},
+"profile": {
+"profile":"",
+"aboutme":"Diplomed from ENSIIE, I'm looking for an awesome job !",
+"email":"loic.carbonne.mail@gmail.com",
+"address":"58 rue louise de Keroual, 91000 EVRY",
+"links": [
+{"class":"fa-github","link":"https://github.com/loic-carbonne"},
+{"class":"fa-linkedin","link":"http://www.linkedin.com/in/loic-carbonne"},
+{"class":"fa-stack-overflow","link":"http://stackoverflow.com/users/story/6638877"}
+],
+"work_companies":[
+{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21"},
+{"id":2,"name":"Fagron Compounding Services","job":"Full-stack developer","location":"Paris","started":"2014-09-01","ended":"2015-12-15"},
+{"id":3,"name":"Laboratoire Delpech","job":"Full-stack developer","location":"Marseille","started":"2014-04-01","ended":"2014-07-15"},
+{"id":4,"name":"Hotel Vendôme","job":"Receptionist","location":"Aix-En-Provence","started":"2013-10-01","ended":"2014-06-30"}
+],
+"schools":[
+  {"id":5,"name":"ENSIIE","started":"2014-09-01"},
+  {"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
+],
+"projects":[
+{"label":"Continuous Integration","description":"Set up Jenkins","linked_to":1,"tags":["Jenkins","JavaEE","Testing"]},
+{"label":"JavaEE developer","description":"Built a new version of a JavaEE developer","linked_to":1,"tags":["JavaEE","Testing"]},
+{"label":"Full stack engineer","description":"Building a new software","linked_to":2,"tags":["Java","JavaFX","PostgreSQL"]},
+{"label":"Maintenance","linked_to":2,"tags":["PHP","mySQL"]},
+{"label":"Full stack engineer","link":"http://labo-delpech.com","linked_to":3,"tags":["PHP","HTML"]},
+{"label":"school2","linked_to":5,"tags":["PHP","HTML"]},
+{"label":"Connect 4","linked_to":6,"tags":["C++"]},
+{"label":"MovieTinder"},
+{"label":"RapDistrict","link":"http://rapdistrict.free.fr"},
+{"label":"loic-carbonne.github.io"}
+]
+}
+}

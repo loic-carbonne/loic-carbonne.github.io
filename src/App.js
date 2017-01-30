@@ -1,72 +1,148 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 
-class App extends Component {
-  constructor(props) {
-	super(props);
-	this.profile = require("./profile.json");
-	console.log(this.profile)
-  }
-  render() {
+
+var dateFormat = require('dateformat');
+
+var anyMatchInArray = function (target, toMatch) {
+    if( toMatch !== undefined ){
+    //"use strict";
+    var found, targetMap, i, j, cur;
+    found = false;
+    targetMap = {};
+    for (i = 0, j = target.length; i < j; i++) {
+        cur = target[i];
+        targetMap[cur] = true;
+    }
+    for (i = 0, j = toMatch.length; !found && (i < j); i++) {
+        cur = toMatch[i];
+        found = !!targetMap[cur];
+    }
+    return found;
+    }
+    return false;
+};
+
+
+let Project = ({project, first, logo}) => {
+  return (
+    <tr>{(first?<td rowSpan={2}>logo</td>:"")}<td>
+    <h3>{project.label}</h3>
+    <div>{project.description}</div>
+    <span className="tags">{project.tags!==undefined?project.tags.map(t=>{ return t+" " }):""}</span>
+    </td></tr>
+  )
+}
+
+let Place = ({elem, strings, toShow, profile}) => {
+  return (
+    <li>
+          <h3>{elem.job!==undefined?elem.job+" "+strings.at+" ":""}{elem.name} <span className="duration">{elem.started !== undefined ? dateFormat(new Date(elem.started), "mmmm dS, yyyy"):""} - {elem.ended !== undefined ? dateFormat(new Date(elem.ended), "mmmm dS, yyyy"):"now"}</span></h3>
+          <table>
+          <tbody>
+          {profile.projects.filter(p => {return p.linked_to === elem.id && (toShow.length === 0 || anyMatchInArray(toShow,p.tags) ) }).map((p)=>{
+            return <Project key={p.label} project={p} />
+          })
+          }
+          </tbody>
+          </table>
+        </li>
+  )
+}
+
+
+let App = ({ profile,strings, lang, toShow, onLangChange, onClickTag }) => {
     return (
 	<div>
 			<header id="header">
 				<div className="inner">
-					<a href="#" className="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>I am Strata</strong>, a super simple<br />
-					responsive site template freebie<br />
-					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-				</div>
+					<a href="#" className="image avatar"><img src="images/avatar.png" alt="" /></a>
+					<h1><strong>{strings.header_strongcontent}</strong>{strings.header_content}</h1>
+          <div style={{position:"absolute",bottom:15,right:20}}>
+          <a className={"flag" + (lang==="en"?" activeFlag":"")} onClick={()=>{onLangChange("en")}}><img alt="English" src="images/english.png" /></a>
+          <a className={"flag" + (lang==="fr"?" activeFlag":"")} onClick={()=>{onLangChange("fr")}}><img alt="French" src="images/french.png" /></a>
+          </div>
+        </div>
 			</header>
 			<div id="main">
 					<section id="one">
 						<header className="major">
-							<h2>About me</h2>
+							<h2>{strings.aboutme_title}</h2>
 						</header>
-						<p>Yo</p>
+						<p>{profile.aboutme}</p>
 					</section>
 					<section id="two">
 						<header className="major">
-							<h2>Experiences and projects</h2>
+            <h2>{strings.experiences_title}</h2>
+              <h5>{strings.sortbytechno}</h5>
+							{
+								[].concat.apply(
+									[],profile.projects.map( p => {
+											return p.tags
+										}
+									)
+								).filter( (elem, index, self) => {
+										return index === self.indexOf(elem) && elem !== undefined;
+									}
+								).map( tag => { return <button onClick={()=>{onClickTag(tag)}} className={"button small"+(toShow.includes(tag)?" special":"")} key={tag}>{tag}</button>})
+							}
+              <hr></hr>
+							<br/>Work
+							<ul className="alt">
+								{profile.work_companies.filter((elem)=>{
+                  return toShow.length === 0 || profile.projects.filter((pr)=>{ return pr.linked_to === elem.id && anyMatchInArray(toShow,pr.tags) }).length > 0
+                }).map((elem)=>{
+									return <Place key={elem.id} elem={elem} strings={strings} toShow={toShow} profile={profile} />
+									})
+								}
+							</ul>
+              <hr></hr>
+              Personnal
+              <table>
+              <tbody>
+              {profile.projects.filter(p => {return p.linked_to === undefined && (toShow.length === 0 || anyMatchInArray(toShow,p.tags) )}).map((p)=>{
+                return <Project key={p.label} project={p} />
+              })
+              }
+              </tbody>
+              </table>
+              <hr></hr>
+							School
+							<ul className="alt">
+								{profile.schools.filter((elem)=>{
+                  return toShow.length === 0 || profile.projects.filter((pr)=>{ return pr.linked_to === elem.id && anyMatchInArray(toShow,pr.tags) }).length > 0
+                }).map((elem)=>{
+                  return <Place key={elem.id} elem={elem} strings={strings} toShow={toShow} profile={profile} />
+									})
+								}
+							</ul>
 						</header>
 						<p>Yo</p>
 					</section>
 					<section id="three">
-						<header className="major">
-							<h2>Education</h2>
-						</header>
-						<p>Yo</p>
-					</section>
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Jsui al contactez moi quand vous voulez</p>
+						<h2>{strings.contact_title}</h2>
+						<p>{strings.contact_text}</p>
 						<div className="row">
 							<div className="8u 12u$(small)">
-								<form method="post" action="#">
+								<form id="formspree" action={"https://formspree.io/"+profile.email}
+      method="POST">
 									<div className="row uniform 50%">
-										<div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div className="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div className="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div className="12u$"><input type="email" name="email" id="email" placeholder="Email" required/></div>
+										<div className="12u$"><textarea name="message" id="message" placeholder="Message" rows="4" required></textarea></div>
 									</div>
 								</form>
 								<ul className="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" onClick={()=>document.getElementById("formspree").submit()} value="Send Message" /></li>
 								</ul>
 							</div>
 							<div className="4u$ 12u$(small)">
 								<ul className="labeled-icons">
 									<li>
 										<h3 className="icon fa-home"><span className="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-										000-000-0000
+                      {profile.address}
 									</li>
 									<li>
 										<h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
+										<a href={"mailto:"+profile.email}>{profile.email}</a>
 									</li>
 								</ul>
 							</div>
@@ -76,21 +152,27 @@ class App extends Component {
 			<footer id="footer">
 				<div className="inner">
 					<ul className="icons">
-						{this.profile.links.map((elem)=>{
+						{profile.links.map((elem)=>{
 							return <li key={elem.class}><a href={elem.link} className={"icon "+elem.class}><span className="label">Email</span></a></li>
 							})
 						}
 					</ul>
 					<ul className="copyright">
-						<li>&copy; Untitled</li><li>Made with React. Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>© {strings.footer_copyright}</li><li>{strings.footer_content}<br /></li>
 					</ul>
 				</div>
 			</footer>
 	</div>
     );
-  }
 }
 
-
+App.propTypes = {
+  profile: PropTypes.object.isRequired,
+  strings: PropTypes.object.isRequired,
+  lang: PropTypes.string.isRequired,
+  toShow: PropTypes.array.isRequired,
+  onLangChange: PropTypes.func.isRequired,
+  onClickTag: PropTypes.func.isRequired,
+}
 
 export default App;
