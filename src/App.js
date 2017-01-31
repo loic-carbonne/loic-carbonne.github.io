@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 
-
 var dateFormat = require('dateformat');
 
 var anyMatchInArray = function (target, toMatch) {
@@ -23,12 +22,14 @@ var anyMatchInArray = function (target, toMatch) {
 };
 
 
-let Project = ({project, first, logo}) => {
+let Project = ({project, first, logo, toShow}) => {
   return (
     <tr>{(first?<td rowSpan={2}>logo</td>:"")}<td>
     <h3>{project.label}</h3>
     <div>{project.description}</div>
-    <span className="tags">{project.tags!==undefined?project.tags.map(t=>{ return t+" " }):""}</span>
+    {project.tags!==undefined?project.tags.map(t=>{
+      return <span key={t} className={"tags"+(toShow.includes(t)?" highlight":"")}>{t} </span>
+    }):""}
     </td></tr>
   )
 }
@@ -40,7 +41,7 @@ let Place = ({elem, strings, toShow, profile}) => {
           <table>
           <tbody>
           {profile.projects.filter(p => {return p.linked_to === elem.id && (toShow.length === 0 || anyMatchInArray(toShow,p.tags) ) }).map((p)=>{
-            return <Project key={p.label} project={p} />
+            return <Project key={p.label} project={p} toShow={toShow} />
           })
           }
           </tbody>
@@ -50,12 +51,12 @@ let Place = ({elem, strings, toShow, profile}) => {
 }
 
 
-let App = ({ profile,strings, lang, toShow, onLangChange, onClickTag }) => {
+let App = ({ profile ,strings, lang, toShow, sortedTags, onLangChange, onClickTag }) => {
     return (
 	<div>
 			<header id="header">
 				<div className="inner">
-					<a href="#" className="image avatar"><img src="images/avatar.png" alt="" /></a>
+					<a href="#" className="image avatar"><img src="images/avatar.png" alt="avatar" /></a>
 					<h1><strong>{strings.header_strongcontent}</strong>{strings.header_content}</h1>
           <div style={{position:"absolute",bottom:15,right:20}}>
           <a className={"flag" + (lang==="en"?" activeFlag":"")} onClick={()=>{onLangChange("en")}}><img alt="English" src="images/english.png" /></a>
@@ -75,15 +76,7 @@ let App = ({ profile,strings, lang, toShow, onLangChange, onClickTag }) => {
             <h2>{strings.experiences_title}</h2>
               <h5>{strings.sortbytechno}</h5>
 							{
-								[].concat.apply(
-									[],profile.projects.map( p => {
-											return p.tags
-										}
-									)
-								).filter( (elem, index, self) => {
-										return index === self.indexOf(elem) && elem !== undefined;
-									}
-								).map( tag => { return <button onClick={()=>{onClickTag(tag)}} className={"button small"+(toShow.includes(tag)?" special":"")} key={tag}>{tag}</button>})
+								sortedTags.map( tag => { return <button onClick={()=>{onClickTag(tag.tag)}} className={"button small"+(toShow.includes(tag.tag)?" special":"")} key={tag.tag}>{tag.tag} ({tag.c})</button>})
 							}
               <hr></hr>
 							<br/>Work
@@ -100,7 +93,7 @@ let App = ({ profile,strings, lang, toShow, onLangChange, onClickTag }) => {
               <table>
               <tbody>
               {profile.projects.filter(p => {return p.linked_to === undefined && (toShow.length === 0 || anyMatchInArray(toShow,p.tags) )}).map((p)=>{
-                return <Project key={p.label} project={p} />
+                return <Project key={p.label} project={p} toShow={toShow}/>
               })
               }
               </tbody>
@@ -116,7 +109,6 @@ let App = ({ profile,strings, lang, toShow, onLangChange, onClickTag }) => {
 								}
 							</ul>
 						</header>
-						<p>Yo</p>
 					</section>
 					<section id="three">
 						<h2>{strings.contact_title}</h2>
@@ -171,6 +163,7 @@ App.propTypes = {
   strings: PropTypes.object.isRequired,
   lang: PropTypes.string.isRequired,
   toShow: PropTypes.array.isRequired,
+  sortedTags: PropTypes.array.isRequired,
   onLangChange: PropTypes.func.isRequired,
   onClickTag: PropTypes.func.isRequired,
 }

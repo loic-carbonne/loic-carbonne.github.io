@@ -39,20 +39,21 @@
 {"id":4,"name":"Hotel Vendôme","job":"Receptionist","location":"Aix-En-Provence","started":"2013-10-01","ended":"2014-06-30"}
 ],
 "schools":[
-  {"id":5,"name":"ENSIIE","started":"2014-09-01"},
-  {"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
+{"id":5,"name":"ENSIIE","started":"2014-09-01"},
+{"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
 ],
 "projects":[
-{"label":"Continuous Integration","description":"Set up Jenkins","linked_to":1,"tags":["Jenkins","JavaEE","Testing"]},
+{"label":"Continuous Integration","description":"I built a plateform for continuous integration based on Jenkins. That plateform was designed to fit with the different process used in AccorHotels.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","SonarQube"]},
 {"label":"JavaEE developer","description":"Built a new version of a JavaEE developer","linked_to":1,"tags":["JavaEE","Testing"]},
 {"label":"Full stack engineer","description":"Building a new software","linked_to":2,"tags":["Java","JavaFX","PostgreSQL"]},
-{"label":"Maintenance","linked_to":2,"tags":["PHP","mySQL"]},
-{"label":"Full stack engineer","link":"http://labo-delpech.com","linked_to":3,"tags":["PHP","HTML"]},
-{"label":"school2","linked_to":5,"tags":["PHP","HTML"]},
+{"label":"Maintenance of labo-delpech.com","description":"I maintain the website labo-delpech.com. I build new modules and others improvements.","linked_to":2,"tags":["PHP","mySQL"]},
+{"label":"labo-delpech.com","description":"I build this showcase and dynamic website for \"Laboratoire Delpech\", a laboratory specialized in pharmaceutical compounding. Linked with their business software, clients could see progress of their orders. This website contains a complete back-office for administration.","link":"http://labo-delpech.com","linked_to":3,"tags":["Web","PHP","HTML"]},
+{"label":"Web application for hotel management","description":"While I was receptionnist for Hotel Vendome, I built a web application in order to manage plannings, bookings, guests registration, billing, breakfasts registration,...","linked_to":4,"tags":["Web","PHP","Javascript","JQuery","HTML"]},
+{"label":"Image Retrieval","linked_to":5,"tags":["Java"]},
 {"label":"Connect 4","linked_to":6,"tags":["C++"]},
-{"label":"MovieTinder"},
-{"label":"RapDistrict","link":"http://rapdistrict.free.fr"},
-{"label":"loic-carbonne.github.io"}
+{"label":"MovieTinder","tags":["Mobile", "React", "React-native", "Redux","GraphQL"]},
+{"label":"RapDistrict","link":"http://rapdistrict.free.fr","tags":["Web", "PHP", "mySQL","Javascript"]},
+{"label":"loic-carbonne.github.io","tags":["Web", "React", "Redux"]}
 ]
 }
 }

@@ -1,11 +1,22 @@
 const global = (state = {}, action) => {
   switch (action.type) {
     case 'INIT':
-    console.log("action")
-      console.log(action.data)
+    var hist = {};
+    var sortedTags = [];
+    [].concat.apply(
+      [],action.data.profile.projects.map( p => {
+          return p.tags
+        }
+      )
+    ).filter((e)=>{return e !== undefined}).map( (a) => { if (a in hist) hist[a] ++; else hist[a] = 1; } );
+    for(var propertyName in hist) {
+      sortedTags.push({tag:propertyName,c:hist[propertyName]})
+    }
+    sortedTags.sort((a,b)=>{return b.c - a.c})
       return {
         data: action.data,
         lang: action.lang,
+        sortedTags: sortedTags,
         toShow: [],
       }
     case 'SET_LANGUAGE':
@@ -15,9 +26,6 @@ const global = (state = {}, action) => {
         toShow: [],
       })
     case 'FILTER_PROJECTS':
-    console.log(state.toShow.includes(action.tag)?
-    [...state.toShow.slice(0, state.toShow.indexOf(action.tag)), ...state.toShow.slice(state.toShow.indexOf(action.tag)+1)]:
-    [action.tag, ...state.toShow]);
     return Object.assign({}, state, {
       toShow: (state.toShow.includes(action.tag)?
       [...state.toShow.slice(0, state.toShow.indexOf(action.tag)), ...state.toShow.slice(state.toShow.indexOf(action.tag)+1)]:

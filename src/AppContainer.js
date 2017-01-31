@@ -6,6 +6,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     profile: state.data.profile,
     strings: state.data.strings,
+    sortedTags: state.sortedTags,
     lang: state.lang,
     toShow: state.toShow,
   }
