@@ -27,6 +27,8 @@ let Project = ({project, first, logo, toShow}) => {
     <tr>{(first?<td rowSpan={2}>logo</td>:"")}<td>
     <h3>{project.label}</h3>
     <div>{project.description}</div>
+    {project.link!==undefined?<a href={project.link}>Link</a>:""}
+    {project.link!==undefined?<br />:""}
     {project.tags!==undefined?project.tags.map(t=>{
       return <span key={t} className={"tags"+(toShow.includes(t)?" highlight":"")}>{t} </span>
     }):""}

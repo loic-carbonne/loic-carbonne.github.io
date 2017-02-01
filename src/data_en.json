@@ -24,7 +24,7 @@
 },
 "profile": {
 "profile":"",
-"aboutme":"Diplomed from ENSIIE, I'm looking for an awesome job !",
+"aboutme":"Soon diplomed from ENSIIE, I'm looking for an awesome job for september 2017 !",
 "email":"loic.carbonne.mail@gmail.com",
 "address":"58 rue louise de Keroual, 91000 EVRY",
 "links": [
@@ -43,17 +43,19 @@
 {"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
 ],
 "projects":[
-{"label":"Continuous Integration","description":"I built a plateform for continuous integration based on Jenkins. That plateform was designed to fit with the different process used in AccorHotels.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","SonarQube"]},
-{"label":"JavaEE developer","description":"Built a new version of a JavaEE developer","linked_to":1,"tags":["JavaEE","Testing"]},
-{"label":"Full stack engineer","description":"Building a new software","linked_to":2,"tags":["Java","JavaFX","PostgreSQL"]},
-{"label":"Maintenance of labo-delpech.com","description":"I maintain the website labo-delpech.com. I build new modules and others improvements.","linked_to":2,"tags":["PHP","mySQL"]},
-{"label":"labo-delpech.com","description":"I build this showcase and dynamic website for \"Laboratoire Delpech\", a laboratory specialized in pharmaceutical compounding. Linked with their business software, clients could see progress of their orders. This website contains a complete back-office for administration.","link":"http://labo-delpech.com","linked_to":3,"tags":["Web","PHP","HTML"]},
-{"label":"Web application for hotel management","description":"While I was receptionnist for Hotel Vendome, I built a web application in order to manage plannings, bookings, guests registration, billing, breakfasts registration,...","linked_to":4,"tags":["Web","PHP","Javascript","JQuery","HTML"]},
-{"label":"Image Retrieval","linked_to":5,"tags":["Java"]},
-{"label":"Connect 4","linked_to":6,"tags":["C++"]},
-{"label":"MovieTinder","tags":["Mobile", "React", "React-native", "Redux","GraphQL"]},
-{"label":"RapDistrict","link":"http://rapdistrict.free.fr","tags":["Web", "PHP", "mySQL","Javascript"]},
-{"label":"loic-carbonne.github.io","tags":["Web", "React", "Redux"]}
+{"label":"Continuous Integration","description":"I built a platform and a set of tools for continuous integration based on Jenkins. That platform was designed to fit with the different process used in Java Back-office team. I create corporate Ant and Maven build files in order to put all applications under continuous integration. That work permit Java application of benefit from code quality analysis, testing, and others automated tasks.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","Maven","Ant","SeleniumHQ","Quality","SonarQube"]},
+{"label":"JavaEE developments","description":"I study and realized the development of a new version of a JavaEE application. I realized a framework migration from Struts to Struts2, different functional and architectural improvements.","linked_to":1,"tags":["Web","Java","JavaEE","Struts","Struts2"]},
+{"label":"Full stack engineer","description":"I was responsible of building a new business software for pharmaceutical laboratory. First I analysed needs working with specialists in pharmaceutical compounding, then I built the system architecture (Hardware,Software). The next phase was implementing the software in Java/JavaFX","linked_to":2,"tags":["Project Management","Information System Architectures","Java","JavaFX","PostgreSQL"]},
+{"label":"Maintenance of labo-delpech.com","description":"I maintain the website labo-delpech.com. I developed new modules and others improvements.","linked_to":2,"tags":["PHP","mySQL","Javascript"]},
+{"label":"labo-delpech.com","description":"I build this showcase and dynamic website for \"Laboratoire Delpech\", a laboratory specialized in pharmaceutical compounding. Related to their business software, this website is an interface permitting clients seeing the progress of their orders in real time. This website contains a complete back-office for administration.","link":"http://labo-delpech.com","linked_to":3,"tags":["Web","Project Management","PHP","Javascript","HTML"]},
+{"label":"Web application for hotel management","description":"While I was receptionist for Hotel Vendome, I built a web application in order to manage planning, bookings, guests registration, billing, breakfasts registration,...","linked_to":4,"tags":["Web","Project Management","Information System Architectures","PHP","Javascript","JQuery","HTML"]},
+{"label":"Image Retrieval","description":"This school project was an image retrieval system based on histograms. I complete this project with a Spring-boot application to have a better exploitation of results.","linked_to":5,"tags":["Java","JavaEE","Spring-boot","Bootstrap"]},
+{"label":"Connect 4","description":"My first school project, we had to wrote a connect 4 games in C++. I improve it by adding a basic IA","linked_to":6,"tags":["C++"]},
+{"label":"loic-carbonne.github.io","description":"I did this website in order to discover React and Redux","tags":["Web", "React", "Redux"]},
+{"label":"MovieTinder","description":"I realized that mobile app with a flat-mates. Using this app, you can select films they want to see, with a Tinder-like swipe, then it choose the best film to see with your friends. We did it with two purposes : to learn ReactJS and to end with lost time debating to choose a film with our flat-mates.","tags":["Mobile", "React", "React-native", "Redux","GraphQL"]},
+{"label":"AllDrinkGames","description":"AllDrinkGames was a project realized with a classmate. Composed by party games, AllDrinkGames was firstly a website written in PHP/Javascript, then we create the android application based on the same concept","link":"http://alldrinkgames.com","tags":["Web", "Mobile", "Android","PHP","Javascript","Java"]},
+{"label":"RapDistrict","description":"My first dynamic website ! I made it when I was only 13 years old. On this website you can listen music using embedded player provided by deezer.com. That was a good way to learn web basics, PHP, Javascript and databases systems.","link":"http://rapdistrict.free.fr","tags":["Web", "PHP", "mySQL","Javascript"]}
 ]
+
 }
 }

@@ -24,7 +24,7 @@
 },
 "profile": {
 "profile":"",
-"aboutme":"Diplomed from ENSIIE, I'm looking for an awesome job !",
+"aboutme":"Bientot diplomé de l'ENSIIE, je suis à la recherche de nouvelle opportunités à partir de septembre 2017. !",
 "email":"loic.carbonne.mail@gmail.com",
 "address":"58 rue louise de Keroual, 91000 EVRY",
 "links": [
@@ -43,17 +43,18 @@
   {"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
 ],
 "projects":[
-{"label":"Continuous Integration","description":"I built a plateform for continuous integration based on Jenkins. That plateform was designed to fit with the different process used in AccorHotels.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","SonarQube"]},
-{"label":"JavaEE developer","description":"Built a new version of a JavaEE developer","linked_to":1,"tags":["JavaEE","Testing"]},
-{"label":"Full stack engineer","description":"Building a new software","linked_to":2,"tags":["Java","JavaFX","PostgreSQL"]},
-{"label":"Maintenance of labo-delpech.com","description":"I maintain the website labo-delpech.com. I build new modules and others improvements.","linked_to":2,"tags":["PHP","mySQL"]},
-{"label":"labo-delpech.com","description":"I build this showcase and dynamic website for \"Laboratoire Delpech\", a laboratory specialized in pharmaceutical compounding. Linked with their business software, clients could see progress of their orders. This website contains a complete back-office for administration.","link":"http://labo-delpech.com","linked_to":3,"tags":["Web","PHP","HTML"]},
-{"label":"Web application for hotel management","description":"While I was receptionnist for Hotel Vendome, I built a web application in order to manage plannings, bookings, guests registration, billing, breakfasts registration,...","linked_to":4,"tags":["Web","PHP","Javascript","JQuery","HTML"]},
-{"label":"Image Retrieval","linked_to":5,"tags":["Java"]},
-{"label":"Connect 4","linked_to":6,"tags":["C++"]},
-{"label":"MovieTinder","tags":["Mobile", "React", "React-native", "Redux","GraphQL"]},
-{"label":"RapDistrict","link":"http://rapdistrict.free.fr","tags":["Web", "PHP", "mySQL","Javascript"]},
-{"label":"loic-carbonne.github.io","tags":["Web", "React", "Redux"]}
+{"label":"Intégration continue","description":"J'ai mis en place une plateforme d'intégration continue basée sur Jenkins. Cette plateforme a été conçues afin de s'adapter aux différents process utilisés au sein de l'équipe Java back-office d'AccorHotels. J'ai créé des fichiers de build Ant et Maven d'entreprise et générique afin de pouvoir placer n'importe quelle application JavaEE sous intégration continue et ainsi bénéficier d'analyses de qualité de code, de tests et autres taches automatisées.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","Maven","Ant","SeleniumHQ","Quality","SonarQube"]},
+{"label":"Développement JavaEE","description":"J'ai étudié puis développé la nouvelle version d'une application JavaEE. J'ai réalisé une migration du framework Struts vers Struts2, ainsi que différentes refontes fonctionnelles and architecturales.","linked_to":1,"tags":["Web","Java","JavaEE","Struts","Struts2"]},
+{"label":"Ingénieur Full stack","description":"J'étais responsable d'un projet de réalisation d'un nouveau logiciel métier pour laboratoires pharmaceutiques. Premièrement, j'ai étudié les besoins et réalisé le cahier des charges avec des spécialistes en préparation magistrale et officinale, puis j'ai conçus l'architecture complète (Hardware,Software). La phase suivante fut la réalisation du logiciel en Java/JavaFX","linked_to":2,"tags":["Project Management","Information System Architectures","Java","JavaFX","PostgreSQL"]},
+{"label":"Maintenance of labo-delpech.com","description":"J'ai participé à la maintenance du site labo-delpech.com. J'ai developpé de nouveaux modules et autres modifications","linked_to":2,"tags":["PHP","mySQL","Javascript"]},
+{"label":"labo-delpech.com","description":"En binome, j'ai réalisé un portail web pour le \"Laboratoire Delpech\", un laboratoire spécialisé dans la préparation magistrale. En lien avec un logiciel métier, ce portail web permet aux clients de suivre en temps réel les avancées de leur commandes.","link":"http://labo-delpech.com","linked_to":3,"tags":["Web","Project Management","PHP","Javascript","HTML","Server configuration"]},
+{"label":"Application web pour le management hotelier","description":"Pendant que j'étais receptionniste à l'hotel Vendôme, et afin d'améliorer l'administration de cet hotel (entièrement géré sur support papier), j'ai conçu une application web afin de gérer les plannings, les réservations, la facturation, l'enregistrement des petit-déjeuners,...","linked_to":4,"tags":["Web","Project Management","Information System Architectures","PHP","Javascript","JQuery","HTML"]},
+{"label":"Reconnaissance d'image","description":"Ce projet était de monter un système de reconnaissance d'images par indexation d'histogramme. J'ai complété ce projet en rajoutant une application Spring-boot afin d'exploiter au mieux ce systeme.","linked_to":5,"tags":["Java","JavaEE","Spring-boot","Bootstrap"]},
+{"label":"Jeu puissance 4","description":"Mon premier projet scolaire, nous devions réaliser un puissance 4 en C++. Je l'ai légèrement amélioré en incluant une IA basique.","linked_to":6,"tags":["C++"]},
+{"label":"loic-carbonne.github.io","description":"J'ai réalisé ce site personnel avec d'apprendre les bases de React and Redux","tags":["Web", "React", "Redux"]},
+{"label":"MovieTinder","description":"J'ai réalisé cette application mobile avec un colocataire. Cette application permet de renseigner les films que l'on souhaite voir, puis elle choisie pour un groupe de personne le meilleur film à voir. Nous l'avons fait dans deux buts : apprendre React-native/GraphQL et en finir avec le temps perdu à débattre pour choisir un film en colocation.","tags":["Mobile", "React", "React-native", "Redux","GraphQL"]},
+{"label":"AllDrinkGames","description":"AllDrinkGames est un projet réalisé avec un collègue de classe. Composé de jeux de soirée, AllDrinkGames est tout d'abord un site web développé en PHP/Javascript, puis nous avons créé une application android basée sur le même concept","link":"http://alldrinkgames.com","tags":["Web", "Mobile", "Android","PHP","Javascript","Java"]},
+{"label":"RapDistrict","description":"Mon premier site dynamique ! J'ai commencé sa réalisation alors que j'avais seulement 13 ans. Ce site permet d'écouter de la musique via des lecteurs deezer.com. Ce fut un bon moyen d'apprendre les basiques du web, PHP, Javascript et le fonctionnement des bases de données.","link":"http://rapdistrict.free.fr","tags":["Web", "PHP", "mySQL","Javascript"]}
 ]
 }
 }
