@@ -41,3 +41,25 @@ body {
 span.highlight {
   background-color: yellow;
 }
+
+#ListTagsDiv{
+  text-align: center;
+}
+
+#ListTagsDiv.showAll{
+  overflow-y: auto;
+  height: auto;
+}
+
+#ListTagsDiv.reducedHeight{
+  overflow-y: hidden;
+  height: 5.5em;
+}
+
+a{
+  cursor:pointer;
+}
+
+#buttonShowMoreTag{
+  text-align: center;
+}

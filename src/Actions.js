@@ -14,3 +14,8 @@ export function SET_LANGUAGE(lang) {
 export function FILTER_PROJECTS(tag) {
   return { type: 'FILTER_PROJECTS', tag }
 }
+
+
+export function TOGGLE_SHOW_TAG() {
+  return { type: 'TOGGLE_SHOW_TAG' }
+}

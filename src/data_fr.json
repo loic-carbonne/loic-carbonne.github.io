@@ -20,7 +20,9 @@
   "year":"year",
   "from":"from",
   "to":"to",
-  "at":"at"
+  "at":"at",
+  "seeMoreTags":"Voir plus...",
+  "seeLessTags":"Voir moins..."
 },
 "profile": {
 "profile":"",

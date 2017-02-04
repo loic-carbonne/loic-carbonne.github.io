@@ -50,7 +50,7 @@ let Place = ({elem, strings, projects, toShow}) => {
 )
 }
 
-let Experiences = ({strings, sortedTags, profile, toShow, onClickTag}) => {
+let Experiences = ({strings, sortedTags, profile, toShow, onClickTag, showAllTags, toggleShowAllTags}) => {
 
   let work_projects = profile.projects.filter((p)=>{
     return (toShow.length === 0 || anyMatchInArray(toShow,p.tags))
@@ -69,9 +69,16 @@ let Experiences = ({strings, sortedTags, profile, toShow, onClickTag}) => {
     <header className="major">
     <h2>{strings.experiences_title}</h2>
     <h5>{strings.sortbytechno}</h5>
+    <div id="ListTagsDiv" className={showAllTags?"showAll":"reducedHeight"}>
     {
       sortedTags.map( tag => { return <button onClick={()=>{onClickTag(tag.tag)}} className={"button small"+(toShow.includes(tag.tag)?" special":"")} key={tag.tag}>{tag.tag} ({tag.c})</button>})
     }
+    </div>
+    <div id="buttonShowMoreTag">
+    <a onClick={toggleShowAllTags}>
+      {showAllTags?strings.seeLessTags:strings.seeMoreTags}
+    </a>
+    </div>
     <hr></hr>
     { work_projects.length > 0 &&
       <ul className="alt">

@@ -18,6 +18,7 @@ const global = (state = {}, action) => {
         lang: action.lang,
         sortedTags: sortedTags,
         toShow: [],
+        showAllTags: false,
       }
     case 'SET_LANGUAGE':
       return Object.assign({}, state, {
@@ -31,6 +32,10 @@ const global = (state = {}, action) => {
       [...state.toShow.slice(0, state.toShow.indexOf(action.tag)), ...state.toShow.slice(state.toShow.indexOf(action.tag)+1)]:
       [action.tag, ...state.toShow])
     })
+    case 'TOGGLE_SHOW_TAG':
+      return Object.assign({}, state, {
+        showAllTags: !state.showAllTags,
+      })
     default:
       return state
   }

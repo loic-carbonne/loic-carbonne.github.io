@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { SET_LANGUAGE, FILTER_PROJECTS } from './Actions'
+import { SET_LANGUAGE, FILTER_PROJECTS, TOGGLE_SHOW_TAG } from './Actions'
 import App from './App'
 
 const mapStateToProps = (state, ownProps) => {
@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     sortedTags: state.sortedTags,
     lang: state.lang,
     toShow: state.toShow,
+    showAllTags: state.showAllTags,
   }
 }
 
@@ -19,6 +20,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     onClickTag: (tag) => {
       dispatch(FILTER_PROJECTS(tag))
+    },
+    toggleShowAllTags: () => {
+      dispatch(TOGGLE_SHOW_TAG())
     }
   }
 }
