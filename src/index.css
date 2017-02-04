@@ -3,3 +3,41 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.flag:hover{
+  border-bottom: solid 1px;
+}
+.flag img{
+  cursor: pointer;
+}
+.activeFlag{
+  background: transparent;
+  border-bottom: solid 5px;
+}
+.activeFlag:hover{
+  background: transparent;
+  border-bottom: solid 5px;
+}
+
+.project{
+  border-top: solid 1px;
+}
+
+.duration{
+  font-size: 12px;
+}
+
+.tags{
+  font-style: italic;
+  font-size: 80%;
+}
+
+.button{
+  min-width: 1em;
+  height: calc(1.5em + 6px);
+  line-height: 1.5em;
+}
+
+span.highlight {
+  background-color: yellow;
+}
