@@ -35,14 +35,14 @@
 {"class":"fa-stack-overflow","link":"http://stackoverflow.com/users/story/6638877"}
 ],
 "work_companies":[
-{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21"},
-{"id":2,"name":"Fagron Compounding Services","job":"Full-stack developer","location":"Paris","started":"2014-09-01","ended":"2015-12-15"},
-{"id":3,"name":"Laboratoire Delpech","job":"Full-stack developer","location":"Marseille","started":"2014-04-01","ended":"2014-07-15"},
+{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21","logo":"logo-accor.png"},
+{"id":2,"name":"Fagron Compounding Services","job":"Full-stack developer","location":"Paris","started":"2014-09-01","ended":"2015-12-15","logo":"logo-fagron.jpg"},
+{"id":3,"name":"Laboratoire Delpech","job":"Full-stack developer","location":"Marseille","started":"2014-04-01","ended":"2014-07-15","logo":"logo-delpech.png"},
 {"id":4,"name":"Hotel Vendôme","job":"Receptionist","location":"Aix-En-Provence","started":"2013-10-01","ended":"2014-06-30"}
 ],
 "schools":[
-{"id":5,"name":"ENSIIE","started":"2014-09-01"},
-{"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
+{"id":5,"name":"ENSIIE","started":"2014-09-01","logo":"logo-ENSIIE.png"},
+{"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30","logo":"logo-iut.png"}
 ],
 "projects":[
 {"label":"Continuous Integration","description":"I built a platform and a set of tools for continuous integration based on Jenkins. That platform was designed to fit with the different process used in Java Back-office team. I create corporate Ant and Maven build files in order to put all applications under continuous integration. That work permit Java application of benefit from code quality analysis, testing, and others automated tasks.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","Maven","Ant","SeleniumHQ","Quality","SonarQube"]},

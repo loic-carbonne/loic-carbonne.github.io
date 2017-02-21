@@ -4,6 +4,15 @@ body {
   font-family: sans-serif;
 }
 
+table{
+  margin-bottom: 0px;
+}
+hr{
+  margin:0px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .flag:hover{
   border-bottom: solid 1px;
 }
@@ -25,6 +34,8 @@ body {
 
 .duration{
   font-size: 12px;
+  display:block;
+  float:right;
 }
 
 .tags{
@@ -44,6 +55,9 @@ span.highlight {
 
 #ListTagsDiv{
   text-align: center;
+  overflow: auto;
+  overflow-y: hidden; // hide vertical
+  overflow-x: hidden;
 }
 
 #ListTagsDiv.showAll{
@@ -62,4 +76,28 @@ a{
 
 #buttonShowMoreTag{
   text-align: center;
+}
+
+img.logo{
+  max-height: 4em;
+  max-width: 10em;
+
+}
+
+h3.placeTitle{
+  padding-left: 1em;
+  display: inline-block;
+  line-height: 1.25em;
+  margin:auto;
+}
+
+h3.projectTitle{
+  font-size: 1.1em;
+  line-height: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+.projectDescription{
+  font-size: 1em;
+  line-height: normal;
 }

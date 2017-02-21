@@ -23,9 +23,9 @@ var anyMatchInArray = function (target, toMatch) {
 let Project = ({project, first, logo, toShow}) => {
   return (
     <tr>{(first?<td rowSpan={2}>logo</td>:"")}<td>
-    <h3>{project.label}</h3>
-    <div>{project.description}</div>
-    {project.link!==undefined?<a href={project.link}>Link</a>:""}
+    <h3 className="projectTitle">{project.label}</h3>
+    <div className="projectDescription">{project.description}</div>
+    {project.link!==undefined?<a href={project.link} target="_blank" >Link</a>:""}
     {project.link!==undefined?<br />:""}
     {project.tags!==undefined?project.tags.map(t=>{
       return <span key={t} className={"tags"+(toShow.includes(t)?" highlight":"")}>{t} </span>
@@ -37,7 +37,11 @@ let Project = ({project, first, logo, toShow}) => {
 let Place = ({elem, strings, projects, toShow}) => {
   return (
     <li>
-    <h3>{elem.job!==undefined?elem.job+" "+strings.at+" ":""}{elem.name} <span className="duration">{elem.started !== undefined ? dateFormat(new Date(elem.started), "mmmm dS, yyyy"):""} - {elem.ended !== undefined ? dateFormat(new Date(elem.ended), "mmmm dS, yyyy"):"now"}</span></h3>
+    {elem.logo !== undefined &&
+        <img className="logo" src={"images/logos/"+elem.logo} />
+    }
+    <h3 className="placeTitle">{elem.job!==undefined?elem.job+" "+strings.at+" ":""}{elem.name}</h3>
+    <span className="duration">{elem.started !== undefined ? dateFormat(new Date(elem.started), "mmmm dS, yyyy"):""} - {elem.ended !== undefined ? dateFormat(new Date(elem.ended), "mmmm dS, yyyy"):"now"}</span>
     <table>
     <tbody>
     {projects.filter(p => {return p.linked_to === elem.id }).map((p)=>{

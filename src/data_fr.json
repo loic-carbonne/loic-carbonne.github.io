@@ -1,7 +1,7 @@
 {
 "strings": {
   "header_strongcontent":"Loïc Carbonne",
-  "header_content":", Ingénieur développeur enthousiaste.",
+  "header_content":", Ingénieur en informatique passionné.",
   "aboutme_title":"About me",
   "experiences_title":"Experiences and projects",
   "sortbytechno":"Sort by technologies :",
@@ -35,14 +35,14 @@
 {"class":"fa-stack-overflow","link":"http://stackoverflow.com/users/story/6638877"}
 ],
 "work_companies":[
-{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21"},
-{"id":2,"name":"Fagron Compounding Services","job":"Full-stack developer","location":"Paris","started":"2014-09-01","ended":"2015-12-15"},
-{"id":3,"name":"Laboratoire Delpech","job":"Full-stack developer","location":"Marseille","started":"2014-04-01","ended":"2014-07-15"},
+{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21","logo":"logo-accor.png"},
+{"id":2,"name":"Fagron Compounding Services","job":"Full-stack developer","location":"Paris","started":"2014-09-01","ended":"2015-12-15","logo":"logo-fagron.jpg"},
+{"id":3,"name":"Laboratoire Delpech","job":"Full-stack developer","location":"Marseille","started":"2014-04-01","ended":"2014-07-15","logo":"logo-delpech.png"},
 {"id":4,"name":"Hotel Vendôme","job":"Receptionist","location":"Aix-En-Provence","started":"2013-10-01","ended":"2014-06-30"}
 ],
 "schools":[
-  {"id":5,"name":"ENSIIE","started":"2014-09-01"},
-  {"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30"}
+{"id":5,"name":"ENSIIE","started":"2014-09-01","logo":"logo-ENSIIE.png"},
+{"id":6,"name":"DUT","started":"2012-09-01","ended":"2014-07-30","logo":"logo-iut.png"}
 ],
 "projects":[
 {"label":"Intégration continue","description":"J'ai mis en place une plateforme d'intégration continue basée sur Jenkins. Cette plateforme a été conçues afin de s'adapter aux différents process utilisés au sein de l'équipe Java back-office d'AccorHotels. J'ai créé des fichiers de build Ant et Maven d'entreprise et générique afin de pouvoir placer n'importe quelle application JavaEE sous intégration continue et ainsi bénéficier d'analyses de qualité de code, de tests et autres taches automatisées.","linked_to":1,"tags":["Jenkins","JavaEE","Groovy","Testing","JMeter","Maven","Ant","SeleniumHQ","Quality","SonarQube"]},
