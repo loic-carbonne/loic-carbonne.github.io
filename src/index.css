@@ -56,7 +56,7 @@ span.highlight {
 #ListTagsDiv{
   text-align: center;
   overflow: auto;
-  overflow-y: hidden; // hide vertical
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 

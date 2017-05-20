@@ -3,14 +3,19 @@ const global = (state = {}, action) => {
     case 'INIT':
     var hist = {};
     var sortedTags = [];
-    [].concat.apply(
+    var allTags = [].concat.apply(
       [],action.data.profile.projects.map( p => {
           return p.tags
         }
       )
-    ).filter((e)=>{return e !== undefined}).map( (a) => { if (a in hist) hist[a] ++; else hist[a] = 1; } );
+    ).filter((e)=>{return e !== undefined})
+    for( var i = 0 ; i < allTags.length ; i++){
+      if (allTags[i] in hist) hist[allTags[i]] ++; else hist[allTags[i]] = 1;
+    }
     for(var propertyName in hist) {
-      sortedTags.push({tag:propertyName,c:hist[propertyName]})
+      if(hist.hasOwnProperty(propertyName)){
+        sortedTags.push({tag:propertyName,c:hist[propertyName]})
+      }
     }
     sortedTags.sort((a,b)=>{return b.c - a.c})
       return {

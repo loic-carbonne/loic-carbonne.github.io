@@ -38,7 +38,7 @@ let Place = ({elem, strings, projects, toShow}) => {
   return (
     <li>
     {elem.logo !== undefined &&
-        <img className="logo" src={"images/logos/"+elem.logo} />
+        <img className="logo" alt="elem.logo" src={"images/logos/"+elem.logo} />
     }
     <h3 className="placeTitle">{elem.job!==undefined?elem.job+" "+strings.at+" ":""}{elem.name}</h3>
     <span className="duration">{elem.started !== undefined ? dateFormat(new Date(elem.started), "mmmm dS, yyyy"):""} - {elem.ended !== undefined ? dateFormat(new Date(elem.ended), "mmmm dS, yyyy"):"now"}</span>
