@@ -9,6 +9,7 @@
   "education_title":"Education",
   "personal_title":"Personnel",
   "contact_title":"Contact",
+  "marketing_title":"Derniers talks",
   "contact_text":"N'hesitez pas à m'envoyer un message",
   "contact_email":"Email",
   "contact_name":"Name",
@@ -28,14 +29,17 @@
 "profile":"",
 "aboutme":"Diplomé de l'école d'ingénieur en informatique ENSIIE. Je travaille actuellement en tant que développeur web agile au sein de Theodo.",
 "email":"loic.carbonne.mail@gmail.com",
-"address":"58 rue louise de Keroual, 91000 EVRY",
+"address":"82 bd des batignolles, 75017 PARIS",
+"talk_label":"\"Two React fans sent to Angular battleground\" with Jérémy Dardour @ FullStack London 2018",
+"talk_link":"https://skillsmatter.com/conferences/9815-fullstack-2018-the-conference-on-javascript-node-and-internet-of-things",
 "links": [
 {"class":"fa-github","link":"https://github.com/loic-carbonne"},
 {"class":"fa-linkedin","link":"http://www.linkedin.com/in/loic-carbonne"},
 {"class":"fa-stack-overflow","link":"http://stackoverflow.com/users/story/6638877"}
 ],
 "work_companies":[
-{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21","logo":"logo-accor.png"},
+{"id":7,"name":"Theodo","job":"Full-stack Web Developer","location":"Paris","started":"2018-09-12","logo":"logo-theodo.png"},
+{"id":1,"name":"AccorHotels","job":"JavaEE developer","location":"Paris","started":"2016-01-21","ended":"2017-08-31","logo":"logo-accor.png"},
 {"id":2,"name":"Fagron Compounding Services","job":"Full-stack developer","location":"Paris","started":"2014-09-01","ended":"2015-12-15","logo":"logo-fagron.jpg"},
 {"id":3,"name":"Laboratoire Delpech","job":"Full-stack developer","location":"Marseille","started":"2014-04-01","ended":"2014-07-15","logo":"logo-delpech.png"},
 {"id":4,"name":"Hotel Vendôme","job":"Receptionist","location":"Aix-En-Provence","started":"2013-10-01","ended":"2014-06-30"}
@@ -56,7 +60,8 @@
 {"label":"loic-carbonne.github.io","description":"J'ai réalisé ce site personnel avec d'apprendre les bases de React and Redux","tags":[ "React", "Redux"]},
 {"label":"MovieTinder","description":"J'ai réalisé cette application mobile avec un colocataire. Cette application permet de renseigner les films que l'on souhaite voir, puis elle choisie pour un groupe de personne le meilleur film à voir. Nous l'avons fait dans deux buts : apprendre React-native/GraphQL et en finir avec le temps perdu à débattre pour choisir un film en colocation.","tags":["Mobile", "React", "React-native", "Redux","GraphQL"]},
 {"label":"AllDrinkGames","description":"AllDrinkGames est un projet réalisé avec un collègue de classe. Composé de jeux de soirée, AllDrinkGames est tout d'abord un site web développé en PHP/Javascript, puis nous avons créé une application android basée sur le même concept","link":"http://alldrinkgames.com","tags":[ "Mobile", "Android","PHP","Javascript","Java"]},
-{"label":"RapDistrict","description":"Mon premier site dynamique ! J'ai commencé sa réalisation alors que j'avais seulement 13 ans. Ce site permet d'écouter de la musique via des lecteurs deezer.com. Ce fut un bon moyen d'apprendre les basiques du web, PHP, Javascript et le fonctionnement des bases de données.","link":"http://rapdistrict.free.fr","tags":[ "PHP", "mySQL","Javascript"]}
+{"label":"RapDistrict","description":"Mon premier site dynamique ! J'ai commencé sa réalisation alors que j'avais seulement 13 ans. Ce site permet d'écouter de la musique via des lecteurs deezer.com. Ce fut un bon moyen d'apprendre les basiques du web, PHP, Javascript et le fonctionnement des bases de données.","link":"http://rapdistrict.free.fr","tags":[ "PHP", "mySQL","Javascript"]},
+{"label":"Agile web development","description":"At Theodo, we build tailored software that solve our clients most complex problems. We bring our technology know-how and startup culture to accelerate change within the companies we work with. Applications we crafted help cities save water, athletes finance their way to the Olympics, investment professionals gain positions on their markets and more. We specialise in building your tailor-made, scalable web applications in record time, using opensources frameworks like Symfony, Angular, React and Node. We dedicate ourselves fully to the success of our clients, working as partners.","linked_to":7, "tags":[ "Scrum", "Lean", "Javascript", "PHP", "React", "Angular", "Python", "Java"]}
 ]
 }
 }

@@ -4,6 +4,7 @@ import AboutMe from './Sections/AboutMe'
 import Contact from './Sections/Contact'
 import Experiences from './Sections/Experiences'
 import Footer from './Sections/Footer'
+import Marketing from './Sections/Marketing'
 
 let App = ({ profile ,strings, lang, toShow, sortedTags, onLangChange, onClickTag, showAllTags, toggleShowAllTags }) => {
   return (
@@ -12,6 +13,8 @@ let App = ({ profile ,strings, lang, toShow, sortedTags, onLangChange, onClickTa
 
 			<div id="main">
         <AboutMe strings={strings} profile={profile} />
+
+        <Marketing strings={strings} profile={profile} />
 
         <Experiences profile={profile} strings={strings} toShow={toShow} sortedTags={sortedTags} onClickTag={onClickTag}
                       toggleShowAllTags={toggleShowAllTags} showAllTags={showAllTags} />
