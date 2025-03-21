@@ -1,118 +1,110 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 40% 2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 2%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 2%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 40% 2%;
+
+    --muted: 210 20% 92%;
+    --muted-foreground: 210 40% 40%;
+
+    --accent: 210 20% 92%;
+    --accent-foreground: 210 40% 2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 40% 2%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 40% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 40% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 8%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 12%;
+    --muted-foreground: 210 40% 60%;
+
+    --accent: 210 40% 12%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 40% 16%;
+    --input: 210 40% 16%;
+    --ring: 210 100% 50%;
+  }
 }
 
-table{
-  margin-bottom: 0px;
-}
-hr{
-  margin:0px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-.flag:hover{
-  border-bottom: solid 1px;
-}
-.flag img{
-  cursor: pointer;
-}
-.activeFlag{
-  background: transparent;
-  border-bottom: solid 5px;
-}
-.activeFlag:hover{
-  background: transparent;
-  border-bottom: solid 5px;
+.glass {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.project{
-  border-top: solid 1px;
+.dark .glass {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.duration{
-  font-size: 12px;
-  display:block;
-  float:right;
+.section-padding {
+  @apply py-20 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto;
 }
 
-.tags{
-  font-style: italic;
-  font-size: 80%;
+/* Animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.button{
-  min-width: 1em;
-  height: calc(1.5em + 6px);
-  line-height: 1.5em;
-}
-
-span.highlight {
-  background-color: yellow;
-}
-
-#ListTagsDiv{
-  text-align: center;
-  overflow: auto;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-#ListTagsDiv.showAll{
-  overflow-y: auto;
-  height: auto;
-}
-
-#ListTagsDiv.reducedHeight{
-  overflow-y: hidden;
-  height: 5.5em;
-}
-
-a{
-  cursor:pointer;
-}
-
-#buttonShowMoreTag{
-  text-align: center;
-}
-
-img.logo{
-  max-height: 4em;
-  max-width: 10em;
-
-}
-
-h3.placeTitle{
-  padding-left: 1em;
-  display: inline-block;
-  line-height: 1.25em;
-  margin:auto;
-}
-
-h3.projectTitle{
-  font-size: 1.1em;
-  line-height: 1.1em;
-  margin-bottom: 0.5em;
-}
-
-.projectDescription{
-  font-size: 1em;
-  line-height: normal;
-}
-
-.iframe-container{
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-.video-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
 }
