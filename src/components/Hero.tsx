@@ -38,7 +38,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
           Hi, I'm <span className="text-primary">Loïc Carbonne</span>
         </h1>
-        <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-3xl">An passionate engineering leader, currently building something new...</p>
+        <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-3xl">Passionate engineering leader, currently building something new...</p>
         <div className="flex flex-col sm:flex-row gap-4">
           <button onClick={scrollToAbout} className="px-6 py-3 bg-primary text-white rounded-full font-medium transition-all hover:shadow-lg hover:shadow-primary/20 hover:translate-y-[-2px]">
             Learn more
